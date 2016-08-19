@@ -1,1 +1,10 @@
 %h1 Топ 10 товаров, купленных жителями не из Москвы и Питера
+
+%table
+  %thead
+    %tr
+      - @fields.each do |field|
+        %td= field
+
+  %tbody
+    =render @products

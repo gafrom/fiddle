@@ -6,6 +6,7 @@ class @App
     @controller = new App.Controller()
 
   start: =>
+    @controller.initiateClickEvents()
     @controller.configureAnimation()
 
 $ ->

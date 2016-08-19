@@ -11,3 +11,8 @@ class @App.Controller
       delay = 0.0
       for li in ul.children()
         $(li).css 'animationDelay', "#{delay += 0.05}s"
+
+  initiateClickEvents: =>
+    form = $('form')
+    $('.btn_upload').on 'click', ->
+      form.submit()
