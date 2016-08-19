@@ -1,0 +1,58 @@
+.header {
+  .header__inner.admin {
+    .header_menu_block {
+      float: right;
+      height: 100%;
+      width: 580px;
+      position: relative;
+    }
+
+    ul.header-user-profile {
+      list-style: outside none none;
+      float: right;
+      .avatar {
+        width: 66px;
+        height: 66px;
+        margin: 8px;
+      }
+      li.profile {
+        text-transform: none;
+        vertical-align: bottom;
+        text-align: left;
+        p {
+          transition: .2s all;
+          cursor: default;
+          margin: 0.2em;
+          &.dim {
+            color: lightgrey;
+          }
+        }
+      }
+    }
+  }
+  &_compact .header__inner.admin {
+    ul.header-user-profile {
+      padding-left: 20px;
+      bottom: 20px;
+      .avatar {
+        width: 33px;
+        height: 33px;
+        margin: 5px;
+        a {
+          border-radius: 33px;
+          box-shadow: 2px 2px 4px lightgrey;
+          &:hover {
+            box-shadow: 2px 2px 4px #b1b1b1;
+          }
+        }
+        &:last-child {
+          margin-right: 5px;
+        }
+      }
+      li.profile p {
+        opacity: 0;
+        height: 0;
+      }
+    }
+  }
+}

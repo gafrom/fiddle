@@ -1,0 +1,41 @@
+@keyframes flash-success {
+    0%   { border-color: rgba(61, 180, 0, 0.6); }
+    100% { border-color: transparent; }
+}
+@keyframes shake {
+  10%, 90%      { transform: translate3d(-1px, 0, 0); }
+  20%, 80%      { transform: translate3d(2px, 0, 0);  }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60%      { transform: translate3d(4px, 0, 0);  }
+}
+
+input {
+  &.smart-field {
+    color: #505050;
+    padding: 0 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 100%;
+    vertical-align: inherit;
+    margin: 0;
+    outline: none;
+    font-family: inherit;
+    background-color: transparent;
+    &:hover {
+      border: 1px solid lightgrey;
+    }
+    &:focus {
+      outline: none;
+      background-color: inherit;
+    }
+    &.wrong-value {
+      border: 1px solid #ff9c8c;  
+    }
+    &.shake {
+      animation: shake 0.4s ease-out;
+    }
+    &.flashed-success {
+      animation: flash-success 1s ease-out;
+    }
+  }
+}

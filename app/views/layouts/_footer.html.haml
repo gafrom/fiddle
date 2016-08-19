@@ -1,0 +1,30 @@
+%footer.footer{id: 'footer', data: { "turbolinks-permanent": true } }
+  .footer__inner
+    %ul.footer__col.footer__col_first
+      %li= link_to 'Загрузить CSV', '#'
+      %li= link_to 'Показать 10 топ', '#'
+      %li.mobile-only= link_to 'Контакты', '#'
+
+    .footer__col.footer__col_second
+      %h5.footer-col__title Магия ответов на тестовое задание
+      %a.footer-col__magic.icon-flag-checkered{ href: "mailto:gafrom@gmail.com?SUBJECT=#{URI.escape(t 'mail.subject')}&BODY=#{URI.escape(t 'mail.body')}" }
+        %span.address__text
+          %span.address__city Отправить Job offer
+          %span.address__street Из любимого почтового клиента
+      %a.footer-col__magic.icon-award{:href => "tel:+79237405786"}
+        %span.address__text
+          %span.address__city Позвонить
+          %span.address__street Обсудить условия предложения
+
+    .footer__col.footer__col_third
+      %h5.footer-col__title Мои контакты (Афанасьев Олег)
+      %p.footer-col__p
+        %span= link_to 'gafrom@gmail.com', 'mailto:gafrom@gmail.com'
+        %span
+          Тел.:
+          %a.footer__tel-link{:href => "tel:+79237405786"} +7 (923) 740 57 86
+
+  %ul.social-icons.social-icons_footer
+    %li= link_to '', '#', class: 'icon-github-circled'
+
+  %p.footer__copyrights © 2016 Тестовое задание

@@ -1,0 +1,33 @@
+@keyframes come-upwise {
+  0%   { transform: translate3d(0, 60vh, 0); opacity: 0; }
+  100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@keyframes come-leftwise {
+  0%   { transform: translate3d(60vh, 0, 0); opacity: 0; }
+  100% { transform: translate3d(0, 0, 0);    opacity: 1; }
+}
+@keyframes fall-leftwise {
+  0%   { transform: translate3d(60vw, 0, 0); }
+  70%  { transform: translate3d(-35px, 0, 0); }
+  80%  { transform: translate3d(18px, 0, 0);  }
+  90%  { transform: translate3d(-4px, 0, 0);  }
+  100% { transform: translate3d(0, 0, 0);  }
+}
+
+//.group-fallable-upwise .fallable {
+//  animation: come_upwise 0.3s ease-out;
+// animation-fill-mode: both;
+//}
+
+ul.fallable {
+  overflow: hidden;
+  > *:not(.non-fallable) {
+    animation: come-upwise 0.3s ease-out;
+    animation-fill-mode: both;
+  }
+}
+
+.come-leftwise {
+  animation: come-leftwise 0.4s ease-out;
+  animation-fill-mode: both;
+}

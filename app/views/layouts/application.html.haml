@@ -1,0 +1,20 @@
+!!! html
+
+%html{:lang => "ru"}
+  %head
+    %title= @title || "Каталог"
+    = csrf_meta_tags
+    = render 'layouts/meta_tags'
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    - if controller.kind_of? AdminController
+      = render 'admin/layouts/header'
+    - else
+      = render 'layouts/header'
+    
+    .container= yield
+    
+    = render 'layouts/footer'

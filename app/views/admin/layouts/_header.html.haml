@@ -1,0 +1,32 @@
+%header.header
+  .header__inner.admin
+    
+    %h1.header__logo= link_to 'Logo picture', root_path, class: 'logo-picture'
+    
+    %ul.header-user-profile
+      %li.avatar= link_to '', '#', title: "Профиль", class: "avatar-female"
+      %li.profile
+        %p Всемогущий
+        %p.dim Администратор
+    
+    .header_menu_block  
+      %ul.social-icons.social-icons_header
+        %li
+          %a.noveo-icon_in{:href => "#"}
+        %li
+          %a.noveo-icon_vk{:href => "#"}
+        %li
+          %a.noveo-icon_fb{:href => "#"}
+        %li
+          %a.noveo-icon_twitter{:href => "#"}
+        %li
+          %a.noveo-icon_instagram{:href => "#"}
+      %ul.header__menu
+        %li= link_to 'Вакансии', '#', title: 'Все вакансии'
+        %li= link_to 'Списки', '#', title: 'Списки вакансий'
+        %li= link_to 'Офисы', '#', title: 'Офисы'
+        %li= link_to 'Пользователи', '#', title: 'Пользователи'
+
+
+    %button.header__hamburger
+      %span

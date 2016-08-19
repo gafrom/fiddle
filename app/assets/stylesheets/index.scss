@@ -1,0 +1,464 @@
+// Top picture
+
+.index-poster {
+	background-color: #eee;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	transition: .2s all;
+
+	@media screen and (max-width: 480px) {
+		& {
+			display: none;
+		}
+	}
+
+	@media screen and (min-width: 640px) {
+		background-image: image-set(url("/img/banner-main-x300.jpg") 1x,
+		url("/img/banner-main-x300@2x.jpg") 2x,
+		url("/img/banner-main-x300@3x.jpg") 3x);
+		height: 300px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		background-image: image-set(url("/img/banner-main-x500.jpg") 1x,
+		url("/img/banner-main-x500@2x.jpg") 2x);
+		height: 500px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		background-image: image-set(url("/img/banner-main-x900.jpg") 1x,
+		url("/img/banner-main-x900@2x.jpg") 2x);
+		height: 900px;
+	}
+}
+
+// Training block
+
+.index-training {
+	background-color: $white;
+	padding: 15px $mobilePadding 30px $mobilePadding;
+	position: relative;
+	text-align: center;
+
+
+	@media screen and (min-width: 481px) and (max-width: 1023px) {
+		padding: 35px $tabletPadding;
+	}
+
+	@media screen and (min-width: 1024px) {
+		padding: 60px $tabletPadding 100px $tabletPadding;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 1300px;
+		position: relative;
+	}
+
+	&__title {
+		font-family: $fontOpenSans;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.5;
+		margin-bottom: 30px;
+		margin-top: 25px;
+		text-align: center;
+
+		@media screen and (min-width: 481px) and (max-width: 1023px) {
+			font-size: 32px;
+			margin-top: 0;
+		}
+
+		@media screen and (min-width: 1024px) {
+			font-size: 60px;
+			margin-bottom: 35px;
+			margin-top: 0;
+		}
+	}
+
+	&__subtitle {
+		color: $lightGray;
+		font-family: $fontArimo;
+		font-size: 14px;
+		line-height: 1.5;
+
+		@media screen and (min-width: 481px) and (max-width: 1023px) {
+			font-size: 16px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			font-size: 18px;
+			margin: 0 auto;
+			width: 50%;
+		}
+	}
+
+	&__units {
+		margin-top: 20px;
+		position: relative;
+
+		@media screen and (min-width: 481px) and (max-width: 1023px) {
+			margin-top: 40px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			margin-bottom: 50px;
+			margin-top: 60px;
+		}
+	}
+
+	&__unit {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		max-width: 492px;
+		text-align: left;
+		text-decoration: none;
+
+		&:hover {
+			.training-unit__title {
+				color: $red;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 40px;
+		}
+
+		.training-unit {
+			box-sizing: border-box;
+			position: relative;
+
+			&__picture {
+				@extend .binoculars;
+
+				max-height: 150px;
+				overflow: hidden;
+				position: relative;
+
+				img {
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+				}
+
+				@media screen and (min-width: 640px) {
+					max-height: 260px;
+				}
+			}
+
+			&__title {
+				color: $orange;
+				font-family: $fontOpenSans;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.5;
+				margin: 15px 0;
+				text-align: left;
+				text-transform: uppercase;
+
+				@media screen and (min-width: 640px) {
+					font-size: 16px;
+				}
+
+				@media screen and (min-width: 1024px) {
+					font-size: 22px;
+					margin: 35px 0 20px 0;
+				}
+			}
+
+			&__details {
+				color: $lightGray;
+				font-family: $fontOpenSans;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 1.5;
+				margin: 0;
+
+				@media screen and (min-width: 640px) {
+					font-size: 16px;
+				}
+
+				@media screen and (min-width: 1024px) {
+					font-size: 18px;
+				}
+			}
+		}
+
+		@media screen and (min-width: 640px) {
+			display: inline-block;
+			margin-right: 5%;
+			vertical-align: top;
+			width: 45%;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+// "Our life" block
+
+.index-life {
+	background-color: #f9f9f9;
+	position: relative;
+
+	@media screen and (min-width: 640px) {
+		padding-bottom: 40px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		padding-bottom: 0;
+	}
+
+	&__title {
+		color: $darkGray;
+		font-family: $fontOpenSans;
+		font-size: 20px;
+		font-weight: 400;
+		margin: 0 0 30px 0;
+		padding-top: 30px;
+		position: relative;
+		text-align: center;
+
+		@media screen and (min-width: 640px) {
+			font-size: 32px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			color: #fff;
+			font-size: 60px;
+			left: 50%;
+			margin: 0;
+			margin-left: -512px;
+			padding-top: 0;
+			position: absolute;
+			top: 70px;
+			width: 1024px;
+			z-index: 20;
+		}
+	}
+
+	&__picture {
+		background-position: 50% 50%;
+		background-size: cover;
+		height: 155px;
+		margin: 0 $mobilePadding 15px $mobilePadding;
+		margin-bottom: 15px;
+		position: relative;
+
+		@media screen and (min-width: 640px) {
+			height: 280px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			height: 770px;
+			margin: 0;
+		}
+	}
+
+	&__inner {
+		height: 100%;
+		margin: 0 auto;
+		max-width: 1400px;
+		padding: 0 $mobilePadding;
+		position: relative;
+
+		@media screen and (min-width: 1024px) {
+			bottom: 0;
+			box-sizing: border-box;
+			left: 0;
+			padding: 0 $tabletPadding;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		.index-life__story {
+			box-sizing: border-box;
+			position: relative;
+			text-align: center;
+
+			@media screen and (min-width: 1024px) {
+				background-color: rgba($white,.9);
+				min-height: 440px;
+				padding: 35px;
+				position: absolute;
+				right: $tabletPadding;
+				text-align: left;
+				top: 220px;
+				width: 50%;
+			}
+
+			@media screen and (min-width: 1280px) {
+				padding: 40px 60px;
+			}
+
+			.standard-button {
+				background-color: transparent;
+
+				&:hover {
+					background-color: $orange;
+				}
+			}
+
+			.story {
+				&__title {
+					color: $orange;
+					font-family: $fontOpenSans;
+					font-size: 20px;
+					font-weight: 400;
+					margin: 0 0 15px 0;
+					text-align: left;
+
+					@media screen and (min-width: 1024px) {
+						font-size: 32px;
+						margin-bottom: 30px;
+					}
+
+					@media screen and (min-width: 1280px) {
+						font-size: 38px;
+						margin-bottom: 35px;
+					}
+				}
+
+				&__excerpt {
+					color: $darkGray;
+					font-family: $fontArimo;
+					font-size: 16px;
+					line-height: 1.5;
+					margin-bottom: 15px;
+					text-align: left;
+
+					@media screen and (min-width: 1024px) {
+						font-size: 21px;
+						line-height: 1.7;
+						margin-bottom: 25px;
+					}
+
+					@media screen and (min-width: 1280px) {
+						font-size: 22px;
+						line-height: 1.5;
+						margin-bottom: 35px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// "Blog" block
+
+.index-blog {
+	background-color: #f9f9f9;
+	padding: 20px $mobilePadding 30px $mobilePadding;
+	position: relative;
+
+	@media screen and (min-width: 640px) {
+		background-color: $white;
+		padding: 40px $mobilePadding;
+	}
+
+	@media screen and (min-width: 1024px) {
+		padding: 70px $tabletPadding 90px $tabletPadding;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 1300px;
+		position: relative;
+	}
+
+	&__title {
+		color: $orange;
+		display: none;
+		font-family: $fontOpenSans;
+		margin: 0;
+		text-align: center;
+
+		@media screen and (min-width: 640px) {
+			display: block;
+			font-size: 30px;
+			margin-bottom: 30px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			font-size: 38px;
+			margin-bottom: 45px;
+		}
+	}
+
+	&__unit {
+		box-sizing: border-box;
+		display: none;
+		margin-right: 2.666666%;
+		text-decoration: none;
+		vertical-align: top;
+		width: 23%;
+
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+
+		@media screen and (min-width: 640px) {
+			display: inline-block;
+		}
+
+		.blog-unit {
+			&__picture {
+				@extend .binoculars;
+
+				margin-bottom: 25px;
+				max-height: 200px;
+				overflow: hidden;
+				position: relative;
+
+				img {
+					display: block;
+					margin: 0;
+					max-width: 100%;
+				}
+			}
+
+			&__title {
+				color: $darkGray;
+				font-family: $fontOpenSans;
+				font-weight: 400;
+				margin: 0;
+
+				@media screen and (min-width: 640px) {
+					font-size: 13px;
+				}
+
+				@media screen and (min-width: 1024px) {
+					font-size: 18px;
+				}
+			}
+		}
+
+		&:hover .blog-unit__title {
+			color: $red;
+		}
+	}
+
+	&__blog-link {
+		color: $orange;
+		display: block;
+		font-family: $fontOpenSans;
+		font-size: 14px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $red;
+		}
+
+		@media screen and (min-width: 640px) {
+			display: none;
+		}
+	}
+}
