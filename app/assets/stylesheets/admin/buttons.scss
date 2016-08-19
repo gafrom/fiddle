@@ -18,6 +18,15 @@
       border-color: #005BD1;
     }
   }
+  &_upload {
+    &:before {
+      margin-right: 0.7em;
+    }
+  }
+  &_hidden {
+    display: none;
+    visibility: hidden;
+  }
   &.btn-add {
     color: #fff;
     background-color: #ff4b2d;

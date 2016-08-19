@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
-
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: 'catalogs#show'
-
-  resources :catalogs, only: :show
+  root to: 'products#index'
 
   scope  :module => "admin", :as => 'admin', :path => 'fiddle' do
-    root to: 'catalogs#index'
-    resources :catalogs
+    root to: 'catalog#new'
+    resources :catalog, only: [:new, :create]
+    resources :products, only: :index
   end
 end

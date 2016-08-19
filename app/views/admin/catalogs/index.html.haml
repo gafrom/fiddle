@@ -1,6 +1,0 @@
-%h1 Загрузка каталога в формате *.csv
-
-= form_for(@catalog, url: admin_catalogs_path ) do |f| 
-  = f.file_field :image, accept: ".csv", id: "hidden-upload-btn" 
-  %br
-  = f.submit 'Загрузить', class: 'btn btn-default'

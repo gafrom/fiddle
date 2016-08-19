@@ -1,0 +1,7 @@
+%h1 Загрузка каталога в формате *.csv
+
+= form_tag(admin_catalog_index_path, multipart: true) do |f|
+  = file_field :catalog, :file, accept: ".csv"
+  %br
+  = submit_tag '', class: 'btn_hidden'
+  .btn.btn-default.btn_upload.icon-upload-cloud Загрузить данные из файла в хранилище
