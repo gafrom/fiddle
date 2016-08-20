@@ -1,13 +1,16 @@
 .header {
   .header__inner.admin {
     .header_menu_block {
-      float: right;
-      height: 100%;
-      width: 580px;
-      position: relative;
-      display: none;
+     	position: fixed;
+     	top: 0; left: 0;
+     	width: 100%;
+
       @media (min-width: 1024px) {
-        display: block;
+	      float: right;
+	      height: 100%;
+	      width: 580px;
+	      position: relative;
+     
       }
     }
 
