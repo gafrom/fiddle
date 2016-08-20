@@ -3,6 +3,27 @@ html {
 	position: relative;
 }
 .container {
+  padding: 55px $mobilePadding 30px $mobilePadding;
+  position: relative;
+
+	/* Larger than phablet (also point when grid becomes active) */
+	@media (min-width: 550px) {
+    padding: 60px $tabletPadding 30px $tabletPadding;
+  }
+
+	/* Larger than tablet */
+	@media (min-width: 750px) {
+    padding: 70px $tabletPadding 30px $tabletPadding;
+	}
+
+  @media (min-width: 1024px) {
+    padding: 200px $tabletPadding 100px $tabletPadding;
+  }
+
+  &__catalog {
+  	margin: 2em 0;
+  }
+
 	h1 {
 		font-weight: 200;
 		padding-bottom: 0.1em;
