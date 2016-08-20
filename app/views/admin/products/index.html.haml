@@ -6,7 +6,7 @@
   %thead
     %tr
       - @fields.each do |field|
-        %td= t ".#{field}"
+        %th= t ".#{field}"
 
-  %tbody
+  %tbody.fallable-list
     =render @products

@@ -8,6 +8,10 @@ class @App.Controller
     @assignDelays $('.slidable')
     @assignDelays $('.fallable')
 
+    firstField = $('.slidable.first')
+    firstField.one 'animationstart webkitAnimationStart mozanimationstart MSAnimationStart oanimationstart', ->
+      setTimeout (-> firstField.find('input').first().focus()), 1000
+
   initiateClickEvents: ->
     form = $('form')
     $('.btn_upload').on 'click', ->
