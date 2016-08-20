@@ -5,6 +5,9 @@ class Product < ApplicationRecord
     :product_category, :value, :product_name, :vendor,
     :phone, :customer_name, :zip_code, :city, :street 
   ]
+
+  scope :periphery, -> { where.not(city: ['Москва', 'Санкт-Петербург']) }
+  
   
   def self.load(file)
     destroy_all

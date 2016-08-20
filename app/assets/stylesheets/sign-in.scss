@@ -1,0 +1,55 @@
+@-webkit-keyframes come_leftwise {
+  0%   { transform: translate3d(100vw, 0, 0); }
+  70%  { transform: translate3d(-35px, 0, 0); }
+  80%  { transform: translate3d(18px, 0, 0);  }
+  90%  { transform: translate3d(-4px, 0, 0);  }
+  100% { transform: translate3d(0, 0, 0);  }
+}
+@-moz-keyframes come_leftwise {
+  0%   { transform: translate3d(100vw, 0, 0); }
+  70%  { transform: translate3d(-35px, 0, 0); }
+  80%  { transform: translate3d(18px, 0, 0);  }
+  90%  { transform: translate3d(-4px, 0, 0);  }
+  100% { transform: translate3d(0, 0, 0);  }
+}
+@-o-keyframes come_leftwise {
+  0%   { transform: translate3d(100vw, 0, 0); }
+  70%  { transform: translate3d(-35px, 0, 0); }
+  80%  { transform: translate3d(18px, 0, 0);  }
+  90%  { transform: translate3d(-4px, 0, 0);  }
+  100% { transform: translate3d(0, 0, 0);  }
+}
+@keyframes come_leftwise {
+  0%   { transform: translate3d(100vw, 0, 0); }
+  70%  { transform: translate3d(-35px, 0, 0); }
+  80%  { transform: translate3d(18px, 0, 0);  }
+  90%  { transform: translate3d(-4px, 0, 0);  }
+  100% { transform: translate3d(0, 0, 0);  }
+}
+
+.block-sign-in {
+  overflow: hidden;
+  .content {
+    padding: 2em 25px;
+    text-align: center;
+  }
+
+  
+  .slidable {
+    -webkit-animation: come_leftwise 0.6s ease-in-out;
+    -webkit-animation-fill-mode: both;
+    -moz-animation: come_leftwise 0.6s ease-in-out;
+    -moz-animation-fill-mode: both;
+    -o-animation: come_leftwise 0.6s ease-in-out;
+    -o-animation-fill-mode: both;
+    animation: come_leftwise 0.6s ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  input[type=submit] {
+    background-color: #7ece50;
+    color: white;
+    border: none;
+    margin-top: 1em;
+  }
+}

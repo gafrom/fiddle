@@ -2,12 +2,13 @@
 
 class @App
   constructor: ->
-    console.log 'App started'
     @controller = new App.Controller()
 
   start: =>
-    @controller.initiateClickEvents()
-    @controller.configureAnimation()
+    console.log 'App started'
+    $(document).on 'turbolinks:load', =>
+      @controller.initiateClickEvents()
+      @controller.configureAnimation()
 
 $ ->
   app = new App()

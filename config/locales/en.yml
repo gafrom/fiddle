@@ -20,6 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  admin:
+    products:
+      index:
+        product_category: Категория
+        value: Продажи
+        product_name: Название
+        vendor: Поставщик
+        phone: Тел
+        customer_name: Покупатель
+        zip_code: Индекс
+        city: Город
+        street: Улица
+
   mail:
     subject: Job Offer (Rambler)
     body: >

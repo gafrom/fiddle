@@ -1,0 +1,12 @@
+%h1 Данные из хранилища
+%h5
+  %i Топ 10 товаров, купленных жителями не из Москвы и Питера
+
+%table
+  %thead
+    %tr
+      - @fields.each do |field|
+        %td= t ".#{field}"
+
+  %tbody
+    =render @products

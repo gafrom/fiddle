@@ -1,0 +1,19 @@
+%h1 Тестовое приложение для Rambler&Co
+
+.block-sign-in
+  .content
+    %h5 Пожалуйста, выполните вход, чтобы продолжить
+
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field.slidable
+        = f.label :email
+        = f.email_field :email, autofocus: true
+
+      .field.slidable
+        = f.label :password
+        = f.password_field :password, autocomplete: "off"
+
+      .actions.slidable
+        = f.submit "Войти"
+
+    = render "devise/shared/links"
