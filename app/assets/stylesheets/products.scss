@@ -2,9 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-th { 
-  color: lightseagreen;
-}
-table tbody tr td {
-	padding: 5px 10px;
+
+table {
+  th { 
+    color: lightseagreen;
+  }
+  thead th, tbody td {
+    &:nth-child(2) ~ * { display: none; }
+
+    /* Larger than mobile */
+    @media (min-width: 450px) {
+      &:nth-child(3) { display: table-cell; }
+    }
+
+    /* Larger than tablet */
+    @media (min-width: 750px) {
+      &:nth-child(4) { display: table-cell; }
+    }
+
+    /* Larger than desktop */
+    @media (min-width: 1000px) {
+      &:nth-child(5), &:nth-child(6) { display: table-cell; }
+    }
+
+    /* Larger than Desktop HD */
+    @media (min-width: 1200px) {
+      &:nth-child(7) { display: table-cell; }
+    }
+    /* Larger than Desktop HD 1300 */
+    @media (min-width: 1300px) { 
+      &:nth-child(8) ~ * { display: table-cell; }
+    }
+  }
+  tbody tr td {
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
 }

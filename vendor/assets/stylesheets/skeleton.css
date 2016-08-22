@@ -386,6 +386,8 @@ there.
 
 /* Larger than mobile */
 @media (min-width: 400px) { /* eee */ }
+/* Larger than mobile 450 */
+@media (min-width: 450px) { /* eee */ }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) { /* eee */ }

@@ -5,7 +5,6 @@ class @App
     @controller = new App.Controller()
 
   start: =>
-    console.log 'App started'
     $(document).on 'turbolinks:load', =>
       @controller.initiateClickEvents()
       @controller.configureAnimation()

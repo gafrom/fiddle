@@ -8,8 +8,9 @@ class Product < ApplicationRecord
 
   scope :periphery, -> { where.not(city: ['Москва', 'Санкт-Петербург']) }
   
-  
   def self.load(file)
+    return unless file
+    
     destroy_all
 
     CSV.foreach(file.tempfile, :headers => true, :col_sep => ';') do |unstripped|
