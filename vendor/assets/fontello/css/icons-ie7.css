@@ -11,6 +11,7 @@
 }
  
 .icon-award { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-spin1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe830;&nbsp;'); }
 .icon-github-circled { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09b;&nbsp;'); }
 .icon-upload-cloud { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0ee;&nbsp;'); }
 .icon-flag-checkered { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf11e;&nbsp;'); }

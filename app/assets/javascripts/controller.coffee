@@ -10,7 +10,10 @@ class @App.Controller
 
   initiateClickEvents: ->
     form = $('form')
+    input = form.find('input[type=file]')
+    
     $('.btn_upload').on 'click', ->
+      new Popup() unless input[0].files.length is 0
       form.submit()
 
   assignDelays: (elems) ->
