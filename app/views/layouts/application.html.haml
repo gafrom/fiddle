@@ -3,6 +3,8 @@
 %html{:lang => "ru"}
   %head
     %title= @title || "Каталог"
+
+    = yield(:head) if content_for?(:head)
     = csrf_meta_tags
     = render 'layouts/meta_tags'
 

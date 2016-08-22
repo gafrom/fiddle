@@ -13,7 +13,7 @@ class @App.Controller
     input = form.find('input[type=file]')
     
     $('.btn_upload').on 'click', ->
-      new Popup() unless input[0].files.length is 0
+      new Popup(form) unless input[0].files.length is 0
       form.submit()
 
   assignDelays: (elems) ->

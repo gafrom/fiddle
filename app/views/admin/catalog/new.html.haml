@@ -11,3 +11,6 @@
 
     = submit_tag '', class: 'hidden'
     .btn.btn-default.btn_upload.icon-upload-cloud Загрузить данные из файла в хранилище
+
+= content_for :head do
+  = tag(:meta, name: 'turbolinks-cache-control', content: 'no-cache')
