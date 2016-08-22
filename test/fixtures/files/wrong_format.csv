@@ -1,0 +1,19 @@
+class @App.Controller
+  constructor: (@backend) ->
+    @gui = new App.Gui(@)
+    $(document).on 'turbolinks:visit', (event) ->
+      console.log 'visit', event.data
+
+  set: (args={}) =>
+    $.each args, (k,v) =>
+      switch k
+        when 'office'
+          App.Office.current = App.Office.findBy { slug: v }
+          Cookie.set k, v
+    
+    @pushLocationHash()
+    @render()
+
+  render: =>
+    @getCurrentList()
+    
