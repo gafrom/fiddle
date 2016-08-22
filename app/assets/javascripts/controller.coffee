@@ -1,8 +1,4 @@
 class @App.Controller
-  constructor: ->
-    console.log 'App Controller started'
-    @backend = new App.Backend(@)
-    @gui = new App.Gui(@)
 
   configureAnimation: =>
     @assignDelays $('.slidable')
