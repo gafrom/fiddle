@@ -9,7 +9,7 @@ class Product < ApplicationRecord
   scope :periphery, -> { where.not(city: ['Москва', 'Санкт-Петербург']) }
   
   def self.load(file)
-    return unless file
+    return unless file.respond_to? :tempfile
     
     destroy_all
 
@@ -18,5 +18,9 @@ class Product < ApplicationRecord
       unstripped.each { |k, v| row[k.strip] = v.strip }
       create(row.to_hash)
     end
+
+    true
+  rescue
+    false
   end
 end

@@ -21,6 +21,10 @@
 
 en:
   admin:
+    catalog:
+      create:
+        file_missing: Выберите файл для загрузки
+        load_error: Ошибка загрузки файла
     products:
       index:
         product_category: Категория
@@ -32,6 +36,7 @@ en:
         zip_code: Индекс
         city: Город
         street: Улица
+        upload_file: Загрузите файл в формате *.CSV
 
   mail:
     subject: Job Offer (Rambler)

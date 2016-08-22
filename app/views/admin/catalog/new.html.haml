@@ -1,8 +1,13 @@
 %h1 Загрузка каталога в формате *.csv
 
 .container__catalog
+  - flash.each do |k, msg|
+    %p.flash{ class: "flash__#{k}" }= msg
+  
   = form_tag(admin_catalog_index_path, multipart: true) do |f|
     = file_field :catalog, :file, accept: ".csv"
     %br
+
+
     = submit_tag '', class: 'hidden'
     .btn.btn-default.btn_upload.icon-upload-cloud Загрузить данные из файла в хранилище

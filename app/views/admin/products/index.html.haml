@@ -2,11 +2,15 @@
 %h5
   %i Топ 10 товаров, купленных жителями не из Москвы и Питера
 
-%table
-  %thead
-    %tr
-      - @fields.each do |field|
-        %th= t ".#{field}"
+- if @products.empty?
+  %p= link_to t('.upload_file'), new_admin_catalog_path
 
-  %tbody.fallable-list
-    =render @products
+- else
+  %table
+    %thead
+      %tr
+        - @fields.each do |field|
+          %th= t ".#{field}"
+
+    %tbody.fallable-list
+      =render @products
